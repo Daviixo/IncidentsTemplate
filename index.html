@@ -43,26 +43,108 @@
 
         <div>
 
-            <div class="table-responsive"><label><strong>Start - Date/Time</strong></label></div>
-            
-            <div class="">
-                    <input type="datetime-local" id="startTime" class="form-control" value="" />
-            </div><br>
+            <label for="products">Choose your products:</label><br>
 
-            <div class="table-responsive"><label><strong>End - Date/Time</strong></label></div>
-            
-            <div class="">
-                    <input type="datetime-local" id="endTime" class="form-control" value="" />
-            </div><br>
+            <select id="products" class="form-select form-select-lg mb-3" multiple aria-label=".form-select-lg example">
+                <option>- GoTo -</option>
+                <option value=' Pro/Central'> Pro/Central</option>
+                <option value=' GoToMyPC'> GoToMyPC</option>
+                <option value=' Hamachi'> Hamachi</option>
+                <option> - GoTo APIs -</option>
+                <option value=' GoToMeeting API '> GoToMeeting API </option>
+                <option value=' GoToTraining API '> GoToTraining API </option>
+                <option value=' GoToWebinar API '> GoToWebinar API </option>
+                <option value=' GoToConnect API '> GoToConnect API </option>
+                <option value=' GoToAssist Service Desk API '> GoToAssist Service Desk API </option>
+                <option value=' GoToAssist Remote Support API '> GoToAssist Remote Support API </option>
+                <option value=' GoToAssist Corporate API '> GoToAssist Corporate API </option>
+                <option value=' GoTo Developer Center Frontend Status'> GoTo Developer Center Frontend Status</option>
+                <option value=' Admin API '> Admin API </option>
+                <option value=' SCIM API '> SCIM API </option>
+                <option value=' Authentication API '> Authentication API </option>
+                <option value=' GoToMeeting'> GoToMeeting</option>
+                <option value=' GoToTraining'> GoToTraining</option>
+                <option value=' GoToWebinar'> GoToWebinar</option>
+                <option> - GoToConnect -</option>
+                <option value=' * VoIP Calls *'> * VoIP Calls *</option>
+                <option value=' Deskphones'> Deskphones</option>
+                <option value=' GoToConnect Web'> GoToConnect Web</option>
+                <option value=' GoToConnect Mobile'> GoToConnect Mobile</option>
+                <option value=' * PSTN Calls *'> * PSTN Calls *</option>
+                <option value=' Inbound'> Inbound</option>
+                <option value=' Outbound'> Outbound</option>
+                <option value=' * Messaging *'> * Messaging *</option>
+                <option value=' SMS'> SMS</option>
+                <option value=' Chat'> Chat</option>
+                <option value=' * Services *'> * Services *</option>
+                <option value=' Meetings'> Meetings</option>
+                <option value=' Fax'> Fax</option>
+                <option value=' Contact Center'> Contact Center</option>
+                <option value=' Administration Portal'> Administration Portal</option>
+                <option> - GoToIT -</option>
+                <option value=' * Business Applications *'> * Business Applications *</option>
+                <option value=' LogMeIn LastPass'> LogMeIn LastPass</option>
+                <option value=' MIM (Microsoft Identity Manager)'> MIM (Microsoft Identity Manager)</option>
+                <option value=' Salesforce'> Salesforce</option>
+                <option value=' Samanage'> Samanage</option>
+                <option value=' Slack100.0% uptime in the past 90 days.'> Slack100.0% uptime in the past 90 days.</option>
+                <option value=' * Cloud Services *'> * Cloud Services *</option>
+                <option value=' Domain Services'> Domain Services</option>
+                <option> Multi-factor Authentication</option>
+                <option value=' Microsoft Office 365'> Microsoft Office 365</option>
+                <option value=' Other Services'> Other Services</option>
+                <option value=' Single Sign On Services'> Single Sign On Services</option>
+                <option value=' * LogMeIn Offices *'> * LogMeIn Offices *</option>
+                <option value=' Bangalore'> Bangalore</option>
+                <option value=' Boston'> Boston</option>
+                <option value=' Burlington'> Burlington</option>
+                <option value=' Budapest'> Budapest</option>
+                <option value=' Costa Rica'> Costa Rica</option>
+                <option value=' Dresden'> Dresden</option>
+                <option value=' Dublin'> Dublin</option>
+                <option value=' Guatemala City'> Guatemala City</option>
+                <option value=' Herzliya'> Herzliya</option>
+                <option value=' Jersey City'> Jersey City</option>
+                <option value=' Karlsruhe'> Karlsruhe</option>
+                <option value=' Lindon'> Lindon</option>
+                <option value=' London'> London</option>
+                <option value=' Montreal'> Montreal</option>
+                <option value=' Mountain View'> Mountain View</option>
+                <option value=' Munich'> Munich</option>
+                <option value=' Quebec City'> Quebec City</option>
+                <option value=' Raleigh'> Raleigh</option>
+                <option value=' San Francisco'> San Francisco</option>
+                <option value=' Santa Barbara'> Santa Barbara</option>
+                <option value=' Sao Paulo'> Sao Paulo</option>
+                <option value=' Sydney'> Sydney</option>
+                <option value=' Szeged'> Szeged</option>
+                <option value=' Tempe'> Tempe</option>
+                <option value=' * Network & Telephony Systems *'> * Network & Telephony Systems *</option>
+                <option value=' Cisco phone system'> Cisco phone system</option>
+                <option value=' Global WiFi Services'> Global WiFi Services</option>
+                <option value=' Interactive Intelligence contact center'> Interactive Intelligence contact center</option>
+                <option value=' GoToConnect Corporate PBX'> GoToConnect Corporate PBX</option>
+                <option> VPN - Cisco Anyconnect</option>
+                <option value=' * Other *'> * Other *</option>
+                <option value=' Other Services'> Other Services</option>
+                <option> - G2M / G2W / G2T / OV –</option>
+                <option value=' GoToMeeting'> GoToMeeting</option>
+                <option value=' GoToWebinar'> GoToWebinar</option>
+                <option value=' GoToTraining'> GoToTraining</option>
+                <option value=' OpenVoice'> OpenVoice</option>
+
+            </select>
 
             <div class="form-group">
-                <label for="exampleFormControlTextarea1"><strong>Impact</strong></label>
-                <textarea class="form-control" id="impact" rows="5"></textarea>
+                <label for="exampleFormControlTextarea1"><strong>Customer Impact</strong></label>
+                <textarea class="form-control" id="impact" rows="1"></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1"><strong>Resolution</strong></label>
-                <textarea class="form-control" id="resolution" rows="3"></textarea>
+            <div class="mb-3 row">
+                <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Customer Reports</strong></label>
+                <div class="col-sm-13">
+                    <input type="text" id="slackChannel" rows="1" cols="30" wrap="soft" class="form-control">
+                </div>
             </div>
 
             <div class="mb-3 row">
@@ -72,20 +154,19 @@
                 </div>
             </div>
             
-            <div class="mb-3 row">
-                <label for="inputCallerEmail" class="col-sm-6 col-form-label"><strong>Customer Reports</strong></label>
-                <div class="col-sm-7">
-                    <input type="text" id="customerReports" rows="1" cols="30" wrap="soft" class="form-control">
-                </div>
-            </div>
+        <label><strong>Severity</strong></label>
 
+        <select id="mySelect">
+            <option value="P1">P1</option>
+            <option value="P2">P2</option>
+        </select><br>
             
         <br>
 
         </div>
 
                 <button type="button" class="btn btn-success" value="Copy" id="copy" onclick="copyText();">Create
-                    Template</button><br><br>
+                    Templates </button><br><br>
 
 
                 <button type="button" class="btn btn-danger" onclick="location.reload();">
@@ -94,9 +175,11 @@
 
                 <br>
 
-    </form>
+    </form><br>
 
+    <!--
     <textarea class="test" name="text" id="temp" wrap="soft"></textarea><br><br>    
+    -->
 
     <div class="cpy">
         <div class="container">

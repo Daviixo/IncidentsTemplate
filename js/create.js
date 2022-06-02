@@ -53,8 +53,8 @@ function createTemplate(){
     // Slack Channel
     // Conf. Bridge
 
-    '<br><br><strong>Internal Status Page Template:</strong><br>Product Impact: ' + selected + '<br>Timeline: ' + utcStr +
-    '<br>Customer Reports: ' + cReports + '<br>Customer Impact/Issue: ' + cImpact + '<br>Slack Channel: ' + cSlackChannel + '<br>Conf. Bridge: ' + confBridge + 
+    '<br><br><strong>Internal Status Page Template:</strong><br>Product Impact - ' + selected + '<br>Timeline - ' + utcStr +
+    '<br>Customer Reports - ' + cReports + '<br>Customer Impact - ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + confBridge + 
 
     //This will be the 4th and last template:
     // Comms Response Template:

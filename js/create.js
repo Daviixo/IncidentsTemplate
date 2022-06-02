@@ -63,7 +63,9 @@ function createTemplate(){
     // Slack incident channel [SLACK CHANNEL]
 
     '<br><br><strong>Comms Response Template:</strong><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users ' + cImpact + '.' +
-    '<br>Status pages are being sent at this moment. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel
+    '<br>Status pages are being sent at this moment. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
+
+    '<br><br>Your friends:<br><img src="images/lminoclogo.png" alt="NOC_Logo" width="124" height="150">'
     
     );
 

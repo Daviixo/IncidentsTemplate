@@ -3,6 +3,8 @@ function createTemplate(){
     //Var today could be useful in the future, leaving that here for reference
     var today = new Date().toLocaleDateString('en-us', { hour:"2-digit", minute:"2-digit", weekday:"long", year:"numeric", month:"short", day:"numeric"});
 
+    var cTittle = document.getElementById("sptittle").value;
+
     const utcStr = new Date().toUTCString();
     console.log(utcStr);
 
@@ -34,7 +36,7 @@ function createTemplate(){
     //[PRODUCT] - [ISSUE]
 
     var winPrint = window.open('TEST', '', 'left=0,top=0,width=450,height=800,toolbar=0,scrollbars=0,status=0');
-    winPrint.document.write('<title>Incidents Templates</title><br /><br /> <strong> External Status Page Template</strong><br>' + selected + ' - ' + cImpact
+    winPrint.document.write('<title>Incidents Templates</title><br /><br /> <strong> External Status Page Template</strong><br>' + selected + ' - ' + cTittle
     
     //This is the start of our second template:
     //External Status Page Template:

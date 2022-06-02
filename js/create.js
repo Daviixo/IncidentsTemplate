@@ -41,7 +41,7 @@ function createTemplate(){
     //We are actively investigating reports that some [PRODUCT] customers might be [ISSUE].
     //Our engineers are working to resolve the issue and will provide another update shortly.
 
-    + '<br><br><strong>External Status Page Template</strong><br>We are actively investigating reports that some ' + selected + ' customers might be '
+    + '<br><br>We are actively investigating reports that some ' + selected + ' customers may be '
     + cImpact + '.' +
 
     //This will be our 3rd template:
@@ -62,7 +62,7 @@ function createTemplate(){
     // Status pages are being sent at this moment. Please thread the questions in this message.
     // Slack incident channel [SLACK CHANNEL]
 
-    '<br><br><strong>Comms Response Template:</strong><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users ' + cImpact + '.' +
+    '<br><br><strong>Comms Response Template:</strong><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users are ' + cImpact + '.' +
     '<br>Status pages are being sent at this moment. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
 
     '<br><br>Your friends:<br><img src="images/lminoclogo.png" alt="NOC_Logo" width="124" height="150">'

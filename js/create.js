@@ -25,7 +25,7 @@ function createTemplate(){
         }
     }
 
-    alert("Creating templates for: " + selected);
+    //alert("Creating templates for: " + selected);
 
 
     //FYI: IMPACT == ISSUE!

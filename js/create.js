@@ -44,7 +44,7 @@ function createTemplate(){
     //Our engineers are working to resolve the issue and will provide another update shortly.
 
     + '<br><br>We are actively investigating reports that some ' + selected + ' customers may be '
-    + cImpact + '.' +
+    + cImpact + '. <br><br>Our engineers are working to resolve the issue and will provide another update shortly.' +  
 
     //This will be our 3rd template:
     // Internal Status Page Template:

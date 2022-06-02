@@ -24,7 +24,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="js/copy.js"></script>
+    <script type="text/javascript" src="js/create.js"></script>
 
     
     <p><img id="gotologo" src="images/GoTo_SLogo.png" alt="gotologo" width="92" height="41"></p>
@@ -78,7 +78,6 @@
                 <option value='GoToAssist Seelt'>GoToAssist Seelt</option>
                 <option value='Rescue Live Guide'>Rescue Live Guide</option>
                 <option value='Rescue Live Lens'>Rescue Live Lens</option>
-
             </select>
 
             <div class="form-group">
@@ -89,7 +88,7 @@
             <div class="mb-3 row">
                 <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Customer Reports</strong></label>
                 <div class="col-sm-13">
-                    <input type="text" id="slackChannel" rows="1" cols="30" wrap="soft" class="form-control">
+                    <input type="text" id="customerReports" rows="1" cols="30" wrap="soft" class="form-control">
                 </div>
             </div>
 
@@ -102,7 +101,7 @@
             
         <label><strong>Severity</strong></label>
 
-        <select id="mySelect">
+        <select id="incidentType">
             <option value="P1">P1</option>
             <option value="P2">P2</option>
         </select><br>
@@ -111,7 +110,7 @@
 
         </div>
 
-                <button type="button" class="btn btn-success" value="Copy" id="copy" onclick="copyText();">Create
+                <button type="button" class="btn btn-success" value="Copy" id="copy" onclick="createTemplate();">Create
                     Templates </button><br><br>
 
 

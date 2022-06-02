@@ -21,7 +21,7 @@ function createTemplate(){
     for (var option of document.getElementById('products').options)
     {
         if (option.selected) {
-            selected.push(option.value);
+            selected.push(" " + option.value);
         }
     }
 

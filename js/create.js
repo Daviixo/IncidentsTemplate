@@ -49,13 +49,13 @@ function createTemplate(){
     //This will be our 3rd template:
     // Internal Status Page Template:
     // Product Impact
-    // Timeline
+    // Timeline - If needed later on: '<br>Timeline - ' + utcStr.replace("GMT","UTC")
     // Customer Reports
     // Customer Impact
     // Slack Channel
     // Conf. Bridge
 
-    '<br><br><strong>Internal Status Page Template:</strong><br>Product Impact - ' + selected + '<br>Timeline - ' + utcStr.replace("GMT","UTC") +
+    '<br><br><strong>Internal Status Page Template:</strong><br>Product Impact - ' + selected +
     '<br>Customer Reports - ' + cReports + '<br>Customer Impact - ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + confBridge + 
 
     //This will be the 4th and last template:

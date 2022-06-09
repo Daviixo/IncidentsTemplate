@@ -17,7 +17,7 @@ function createTemplate(){
     var e = document.getElementById("incidentType");
     var cIncidentType = e.value;
 
-    var confBridge = "https://www.uberconference.com/cloudsupport";
+    var confBridge = "(805) 416-0601 Pin: 13554 / https://www.uberconference.com/cloudsupport";
 
     var selected = [];
     for (var option of document.getElementById('products').options)

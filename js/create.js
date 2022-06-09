@@ -17,7 +17,7 @@ function createTemplate(){
     var e = document.getElementById("incidentType");
     var cIncidentType = e.value;
 
-    var confBridge = "(805) 416-0601 Pin: 13554 / https://www.uberconference.com/cloudsupport";
+    var confBridge = "(805) 416-0601 Pin: 13554";
 
     var selected = [];
     for (var option of document.getElementById('products').options)
@@ -56,7 +56,8 @@ function createTemplate(){
     // Conf. Bridge
 
     '<br><br><strong>Internal Status Page Template:</strong><br>Product Impact - ' + selected +
-    '<br>Customer Reports - ' + cReports + '<br>Customer Impact - ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + confBridge + 
+    '<br>Customer Reports - ' + cReports + '<br>Customer Impact - ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
+    confBridge + ' ' + '<a href="https://www.uberconference.com/cloudsupport">https://www.uberconference.com/cloudsupport</a>' +
 
     //This will be the 4th and last template:
     // Comms Response Template:

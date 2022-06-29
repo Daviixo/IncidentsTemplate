@@ -27,6 +27,8 @@ function createTemplate(){
         }
     }
 
+    var finalTitle = cIncidentType + " - " + selected + " - " + cTittle;
+
     //alert("Creating templates for: " + selected);
 
 
@@ -36,7 +38,7 @@ function createTemplate(){
     //[PRODUCT] - [ISSUE]
 
     var winPrint = window.open('TEST', '', 'left=0,top=0,width=450,height=800,toolbar=0,scrollbars=0,status=0');
-    winPrint.document.write('<title>Incidents Templates</title><br /><br /> <strong> External Status Page Template</strong><br>' + selected + ' - ' + cTittle
+    winPrint.document.write('<title>Incidents Templates</title><br><strong> External Status Page Template</strong><br>' + selected + ' - ' + cTittle
     
     //This is the start of our second template:
     //External Status Page Template:
@@ -55,7 +57,7 @@ function createTemplate(){
     // Slack Channel
     // Conf. Bridge
 
-    '<br><br><strong>Internal Status Page Template:</strong><br>Product Impact - ' + selected +
+    '<br><br><strong>Internal Status Page Template:</strong><br>' + finalTitle + '<br></bnr>Product Impact - ' + selected +
     '<br>Customer Reports - ' + cReports + '<br>Customer Impact - ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
     confBridge + ' ' + '<a href="https://www.uberconference.com/cloudsupport">https://www.uberconference.com/cloudsupport</a>' +
 

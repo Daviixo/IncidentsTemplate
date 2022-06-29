@@ -38,7 +38,7 @@ function createTemplate(){
     //[PRODUCT] - [ISSUE]
 
     var winPrint = window.open('TEST', '', 'left=0,top=0,width=450,height=800,toolbar=0,scrollbars=0,status=0');
-    winPrint.document.write('<title>Incidents Templates</title><br><strong> External Status Page Template</strong><br>' + selected + ' - ' + cTittle
+    winPrint.document.write('<title>Incidents Templates</title><br><strong> External Status Page Template</strong><br><br>' + selected + ' - ' + cTittle
     
     //This is the start of our second template:
     //External Status Page Template:
@@ -57,8 +57,8 @@ function createTemplate(){
     // Slack Channel
     // Conf. Bridge
 
-    '<br><br><strong>Internal Status Page Template:</strong><br>' + finalTitle + '<br></bnr>Product Impact - ' + selected +
-    '<br>Customer Reports - ' + cReports + '<br>Customer Impact - ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
+    '<br><br><strong>Internal Status Page Template:</strong><br><br>' + finalTitle + '<br></bnr>Product Impact - ' + selected +
+    '<br>Customer Reports - ' + cReports + '<br>Customer Impact - Customers may be ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
     confBridge + ' ' + '<a href="https://www.uberconference.com/cloudsupport">https://www.uberconference.com/cloudsupport</a>' +
 
     //This will be the 4th and last template:
@@ -67,7 +67,7 @@ function createTemplate(){
     // Status pages are being sent at this moment. Please thread the questions in this message.
     // Slack incident channel [SLACK CHANNEL]
 
-    '<br><br><strong>Comms Response Template:</strong><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users are ' + cImpact + '.' +
+    '<br><br><strong>Comms Response Template:</strong><br><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users are ' + cImpact + '.' +
     '<br>Status pages are being sent at this moment. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
 
     '<br><br>Your friends:<br><img src="images/lminoclogo.png" alt="NOC_Logo" width="124" height="150">' +

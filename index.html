@@ -43,6 +43,15 @@
 
         <div>
 
+            <div class="center">
+                <h2>Incidents Template</h2>
+                <select onchange="location = this.options[this.selectedIndex].value;">
+                    <option value="#">GoTo Another Template</option>
+                    <option value="https://daviixo.github.io/IncidentsTemplate/">Incidents Template</option>
+                    <option value="https://daviixo.github.io/SlackStatusUpdate/">Slack Status Update</option>
+                </select>
+            </div><br>
+
             <div class="mb-3 row">
                 <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>SP Title</strong></label>
                 <div class="col-sm-13">
@@ -89,6 +98,7 @@
 
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"><strong>Customer Impact</strong></label>
+                <p style="font-size:11px">"We are actively investigating reports that some PRODUCT(s) customers may be..."</p>
                 <textarea class="form-control" id="impact" rows="1"></textarea>
             </div>
 
@@ -111,6 +121,7 @@
         <select id="incidentType">
             <option value="P2">P2</option>
             <option value="P1">P1</option>
+            <option value="P3">P3</option>
         </select><br>
             
         <br>
@@ -133,14 +144,8 @@
     <textarea class="test" name="text" id="temp" wrap="soft"></textarea><br><br>    
     -->
 
-    <div class="cpy">
-        <div class="container">
-           <div class="row">
-              <div class="col-md-12">
-                 <p>Copyright © 2022 Designed by David Díaz</a></p>
-              </div>
-           </div>
-        </div>
-     </div>
+    <footer>
+        <p>Copyright © 2022 - Designed by David Díaz<br>
+    </footer>
 
 </html>

@@ -37,7 +37,7 @@ function createTemplate(){
     // This will be our first template - External Status Page Template:
     //[PRODUCT] - [ISSUE]
 
-    var winPrint = window.open('TEST', '', 'left=0,top=0,width=450,height=800,toolbar=0,scrollbars=0,status=0');
+    var winPrint = window.open('Incidents Template', '', 'left=0,top=0,width=450,height=800,toolbar=0,scrollbars=0,status=0');
     winPrint.document.write('<title>Incidents Templates</title><br><strong> External Status Page Template</strong><br><br>' + selected + ' - ' + cTittle
     
     //This is the start of our second template:

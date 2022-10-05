@@ -16,93 +16,92 @@
 
     <p><img id="gotologo" src="images/GoTo_SLogo.png" alt="gotologo" width="92" height="41"></p>
 
+    <br><p style="text-align:center;"><img src="images/noclogo.png" alt="Logo" width="187" height="100"></p>
 
-    <br>
-    <p style="text-align:center;"><img src="images/noclogo.png" alt="Logo" width="187" height="100"></p>
+<body style="background: rgba(0, 0, 0, 0.767)" body></body>
 
-    <body style="background: rgba(0, 0, 0, 0.767)" body></body>
+</head>
 
-    </head>
+<form>
 
-    <form>
+    <title>NOC - Incidents Template</title>
 
-        <title>NOC - Incidents Template</title>
+    <div>
 
-        <div>
-
-            <div class="center">
-                <h2>Incidents Template</h2>
-                <select onchange="location = this.options[this.selectedIndex].value;">
-                    <option value="#">GoTo Another Template</option>
-                    <option value="https://daviixo.github.io/IncidentsTemplate/">Incidents Template</option>
-                    <option value="https://daviixo.github.io/SlackStatusUpdate/">Slack Status Update</option>
-                </select>
-            </div><br>
-
-            <div class="mb-3 row">
-                <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>SP Title</strong></label>
-                <div class="col-sm-13">
-                    <input type="text" id="sptittle" rows="1" cols="30" wrap="soft" class="form-control">
-                </div>
-            </div>
-
-            <label for="products"><strong>Choose your products:</strong></label><br>
-
-            <select id="products" class="form-select form-select-lg mb-3" multiple aria-label=".form-select-lg example">
-                <option value='GoToMeeting'>GoTo Meeting</option>
-                <option value='GoToWebinar'>GoTo Webinar</option>
-                <option value='GoToTraining'>GoTo Training</option>
-                <option value='OpenVoice'>OpenVoice</option>
-                <option value='LastPass'>LastPass</option>
-                <option value='GoToConnect'>GoTo Connect</option>
-                <option value='GoTo Pro/Central'>GoTo Pro/Central</option>
-                <option value='GoToMyPC'>GoTo MyPC</option>
-                <option value='Hamachi'>Hamachi</option>
-                <option value='GoTo Resolve '>GoTo Resolve </option>
-                <option value='Grasshopper'>Grasshopper</option>
-                <option value='join.me'>join.me</option>
-                <option value='Rescue'>Rescue</option>
-                <option value='GoToAssist Remote Support v5'>GoTo Assist Remote Support v5</option>
-                <option value='GoToAssist Remote Support v4'>GoTo Assist Remote Support v4</option>
-                <option value='GoToAssist Service Desk'>GoTo Assist Service Desk</option>
-                <option value='GoToAssist Corporate'>GoTo Assist Corporate</option>
-                <option value='GoToAssist Seelt'>GoTo Assist Seelt</option>
-                <option value='Rescue Live Guide'>Rescue Live Guide</option>
-                <option value='Rescue Live Lens'>Rescue Live Lens</option>
-                <option value='GoToMeeting API '>GoTo Meeting API </option>
-                <option value='GoToTraining API'>GoTo Training API</option>
-                <option value='GoToWebinar API'>GoTo Webinar API</option>
-                <option value='GoToConnect API '>GoTo Connect API </option>
-                <option value='GoToAssist Service Desk API'>GoTo Assist Service Desk API</option>
-                <option value='GoToAssist Remote Support API '>GoTo Assist Remote Support API </option>
-                <option value='GoToAssist Corporate API '>GoTo Assist Corporate API </option>
-                <option value='GoTo Developer Center Frontend'>GoTo Developer Center Frontend</option>
-                <option value='Admin API '>Admin API </option>
-                <option value='SCIM API '>SCIM API </option>
-                <option value='Authentication API '>Authentication API </option>
-                <option value='GoTo Contact Center'>GoTo Contact Center</option>
+        <div class="center">
+            <h2>Incidents Template</h2>
+            <select onchange="location = this.options[this.selectedIndex].value;">
+                <option value="#">GoTo Another Template</option>
+                <option value="https://daviixo.github.io/IncidentsTemplate/">Incidents Template</option>
+                <option value="https://daviixo.github.io/SlackStatusUpdate/">Slack Status Update</option>
             </select>
+        </div><br>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1"><strong>Customer Impact</strong></label>
-                <p style="font-size:11px">"We are actively investigating reports that some PRODUCT(s) customers may be..."</p>
-                <textarea class="form-control" id="impact" rows="1"></textarea>
+        <div class="mb-3 row">
+            <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>SP Title</strong></label>
+            <div class="col-sm-13">
+                <input type="text" id="sptittle" rows="1" cols="30" wrap="soft" class="form-control">
             </div>
+        </div>
 
-            <div class="mb-3 row">
-                <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Customer Reports</strong></label>
-                <div class="col-sm-13">
-                    <input type="text" id="customerReports" rows="1" cols="30" wrap="soft" class="form-control">
-                </div>
-            </div>
+        <label for="products"><strong>Choose your products:</strong></label><br>
 
-            <div class="mb-3 row">
-                <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Slack Channel</strong></label>
-                <div class="col-sm-13">
-                    <input type="text" id="slackChannel" rows="1" cols="30" wrap="soft" class="form-control">
-                </div>
+        <select id="products" class="form-select form-select-lg mb-3" multiple aria-label=".form-select-lg example">
+            <option value='GoToMeeting'>GoTo Meeting</option>
+            <option value='GoToWebinar'>GoTo Webinar</option>
+            <option value='GoToTraining'>GoTo Training</option>
+            <option value='OpenVoice'>OpenVoice</option>
+            <option value='LastPass'>LastPass</option>
+            <option value='GoToConnect'>GoTo Connect</option>
+            <option value='GoTo Pro/Central'>GoTo Pro/Central</option>
+            <option value='GoToMyPC'>GoTo MyPC</option>
+            <option value='Hamachi'>Hamachi</option>
+            <option value='GoTo Resolve '>GoTo Resolve </option>
+            <option value='Grasshopper'>Grasshopper</option>
+            <option value='join.me'>join.me</option>
+            <option value='Rescue'>Rescue</option>
+            <option value='GoToAssist Remote Support v5'>GoTo Assist Remote Support v5</option>
+            <option value='GoToAssist Remote Support v4'>GoTo Assist Remote Support v4</option>
+            <option value='GoToAssist Service Desk'>GoTo Assist Service Desk</option>
+            <option value='GoToAssist Corporate'>GoTo Assist Corporate</option>
+            <option value='GoToAssist Seelt'>GoTo Assist Seelt</option>
+            <option value='Rescue Live Guide'>Rescue Live Guide</option>
+            <option value='Rescue Live Lens'>Rescue Live Lens</option>
+            <option value='GoToMeeting API '>GoTo Meeting API </option>
+            <option value='GoToTraining API'>GoTo Training API</option>
+            <option value='GoToWebinar API'>GoTo Webinar API</option>
+            <option value='GoToConnect API '>GoTo Connect API </option>
+            <option value='GoToAssist Service Desk API'>GoTo Assist Service Desk API</option>
+            <option value='GoToAssist Remote Support API '>GoTo Assist Remote Support API </option>
+            <option value='GoToAssist Corporate API '>GoTo Assist Corporate API </option>
+            <option value='GoTo Developer Center Frontend'>GoTo Developer Center Frontend</option>
+            <option value='Admin API '>Admin API </option>
+            <option value='SCIM API '>SCIM API </option>
+            <option value='Authentication API '>Authentication API </option>
+            <option value='GoTo Contact Center'>GoTo Contact Center</option>
+        </select>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"><strong>Customer Impact</strong></label>
+            <p style="font-size:11px">"We are actively investigating reports that some PRODUCT(s) customers may be..."
+            </p>
+            <textarea class="form-control" id="impact" rows="1"></textarea>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Customer Reports</strong></label>
+            <div class="col-sm-13">
+                <input type="text" id="customerReports" rows="1" cols="30" wrap="soft" class="form-control">
             </div>
-            
+        </div>
+
+        <div class="mb-3 row">
+            <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Slack Channel</strong></label>
+            <div class="col-sm-13">
+                <input type="text" id="slackChannel" rows="1" cols="30" wrap="soft" class="form-control">
+            </div>
+        </div>
+
         <label><strong>Severity</strong></label>
 
         <select id="incidentType">
@@ -110,29 +109,29 @@
             <option value="P1">P1</option>
             <option value="P3">P3</option>
         </select><br>
-            
+
         <br>
 
-        </div>
+    </div>
 
-                <button type="button" class="btn btn-success" value="Copy" id="copy" onclick="createTemplate();">Create
-                    Templates </button><br><br>
+    <button type="button" class="btn btn-success" value="Copy" id="copy" onclick="createTemplate();">Create
+        Templates </button><br><br>
 
 
-                <button type="button" class="btn btn-danger" onclick="location.reload();">
-                    Reset
-                </button>
+    <button type="button" class="btn btn-danger" onclick="location.reload();">
+        Reset
+    </button>
 
-                <br>
+    <br>
 
-    </form><br>
+</form><br>
 
-    <!--
+<!--
     <textarea class="test" name="text" id="temp" wrap="soft"></textarea><br><br>    
     -->
 
-    <footer>
-        <p>Copyright © 2022 - Designed by David Díaz<br>
-    </footer>
+<footer>
+    <p>Copyright © 2022 - Designed by David Díaz<br>
+</footer>
 
 </html>

@@ -110,7 +110,7 @@ function createDraft(){
     + 'Our engineers believe to have identified the issue and are now actively working towards a resolution.<br><br>'
     + 'We will provide another update shortly.'
     + '<br><h1>Monitoring</h1>'
-    + 'Our engineer have corrected the issue and we are confirming that all services are functional.<br><br>'
+    + 'Our engineers have corrected the issue and we are confirming that all services are functional.<br><br>'
     + 'We will continue to monitor the situation and will provide a final update shortly.'
     + '<br><h1>Resolved</h1>'
     + 'We have confirmed that the issue has been resolved and all systems are 100% operational at this time.<br><br>'

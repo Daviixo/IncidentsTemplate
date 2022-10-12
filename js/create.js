@@ -106,11 +106,8 @@ function createDraft(){
     var tab = window.open('about:blank', '_blank');
 
     html = '<title>Results - Incidents Templates</title>'
-    + '<h1>Investigating</h1>'
-    + 'We are actively investigating reports that some GoToMeeting customers may be unable to start or join meetings.'
-    + '<br><br>Our engineers are working to resolve the issue and will provide another update shortly.'
-    + '<br><h1>Identified</h1>'
-    + 'Our engineer believe to have identified the issue and are now actively working towards a resolution.<br><br>'
+    + '<h1>Identified</h1>'
+    + 'Our engineers believe to have identified the issue and are now actively working towards a resolution.<br><br>'
     + 'We will provide another update shortly.'
     + '<br><h1>Monitoring</h1>'
     + 'Our engineer have corrected the issue and we are confirming that all services are functional.<br><br>'

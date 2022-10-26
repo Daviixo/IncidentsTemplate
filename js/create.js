@@ -91,11 +91,12 @@ function createTemplateComms(){
 
     }
 
+
     var tab = window.open('about:blank', '_blank');
 
     html = '<title>Results - Internal Status Page & Comms Response</title>'
-    + '<b>Internal Status Page & Comms Response - Closing Statement</b>'
-    + '<br><br><b>' + isProductPlural + ' Impact: </b>' + selected
+    + '<h1><b>Comms Response - Closing Statement</b></h1>'
+    + '<b>' + isProductPlural + ' Impact: </b>' + selected
     + '<br><b>Timeline: </b>' + getTimeline
     + '<br><b>Customer Impact: </b>' + cImpact
     + '<br><b>Customer Reports: </b>' + cReports
@@ -103,7 +104,16 @@ function createTemplateComms(){
     + '<br><b>Incident Status Update </b> - Resolved'
     + '<br><b>What was done to resolve the issue? </b>\n' + getFix
     + '<br><b>RFO</b> - Upon request, RFO for external customer communication will be published to the RFO distribution list within 48-72 hours.'
-    + '<br><b>PostMortem/RCA</b> - A detailed technical doc will be shared in the incident Slack Channel ' + cSlackChannel;
+    + '<br><b>PostMortem/RCA</b> - A detailed technical doc will be shared in the incident Slack Channel ' + cSlackChannel
+    
+    + '<h1><b>Internal Status Page - Closing Statement</b></h1>'
+    + 'On ' + getTimeline + ',' + selected 
+    + ' customers may have been ' + cImpact 
+    + '. This was identified to have been caused due to ' + getRootCause + '.'
+    + ' To mitigate the issue, ' + getFix
+    + '<br><br><b>RFO</b> - Upon request, RFO for external customer communication will be published to the RFO distribution list within 48-72 hours.'
+    + '<br><br><b>PostMortem/RCA</b> - A detailed technical doc will be shared in the incident Slack Channel ' + cSlackChannel;
+
 
     tab.document.write(html);
     tab.document.close();

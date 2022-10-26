@@ -29,7 +29,9 @@
     <div>
 
         <div class="center">
-            <h2>Incidents Template</h2>
+            <h2><b>Incidents Template</b></h2>
+            <h5>Output will show the starting phase for: </h5>
+            <h6>External/Internal SPs, Comms Response</h6>
             <select onchange="location = this.options[this.selectedIndex].value;">
                 <option value="#">GoTo Another Template</option>
                 <option value="https://daviixo.github.io/IncidentsTemplate/">Incidents Template</option>
@@ -127,7 +129,38 @@
     <br><br>
     <button type="button" class="btn btn-warning" onclick="createDraft();">Status Templates</button>
 
-    <br>
+    <br><br>
+
+    <div class="center">
+        <h2><b>Incidents Template - Part II</b></h2>
+        <h5>Output will show the closing statment for: </h5>
+        <h6>Comms Response</h6>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Root Cause</strong></label>
+        <div class="col-sm-13">
+            <input type="text" id="rootcause" rows="1" cols="30" wrap="soft" class="form-control">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>What was done to fix the issue?</strong></label>
+        <div class="col-sm-13">
+            <input type="text" id="fix" rows="1" cols="30" wrap="soft" class="form-control">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Timeline</strong></label>
+        <p style="font-size:11px">For example: 10/25/2022 9:00 AM UTC - 10/26/2022 04:39 PM UTC</p>
+        <div class="col-sm-13">
+            <input type="text" id="timeline" rows="1" cols="30" wrap="soft" class="form-control">
+        </div>
+    </div><br>
+
+    <button type="button" class="btn btn-success" onclick="createTemplateComms();">Create Template</button><br><br>
+
 
 </form><br>
 

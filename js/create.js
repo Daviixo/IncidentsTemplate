@@ -54,50 +54,59 @@ function createTemplate(){
     tab.document.write(html);
     tab.document.close(); 
 
-    // This was previously used, which will be commented in case something here's needed.
+}
 
-    /*
+function createTemplateComms(){
 
-    var winPrint = window.open('Incidents Template', '', 'left=0,top=0,width=450,height=800,toolbar=0,scrollbars=0,status=0');
-    winPrint.document.write('<title>Incidents Templates</title><br><strong> External Status Page Template</strong><br><br>' + selected + ' - ' + cTittle
+    var selected = [];
+
+    for (var option of document.getElementById('products').options)
+    {
+        if (option.selected) {
+            selected.push(" " + option.value);
+        }
+    }
+
+    var cSlackChannel = document.getElementById("slackChannel").value;
+
+    var getTimeline = document.getElementById("timeline").value;
+
+    var cImpact = document.getElementById("impact").value;
+
+    var cReports = document.getElementById("customerReports").value;
+
+    var getRootCause = document.getElementById("rootcause").value;
+
+    var getFix = document.getElementById("fix").value;
+
+    var productsLenght = selected.length;
     
-    //This is the start of our second template:
-    //External Status Page Template:
-    //We are actively investigating reports that some [PRODUCT] customers might be [ISSUE].
-    //Our engineers are working to resolve the issue and will provide another update shortly.
+    console.log("Lenght: " + productsLenght);
 
-    + '<br><br>We are actively investigating reports that some ' + selected + ' customers may be '
-    + cImpact + '. <br><br>Our engineers are working to resolve the issue and will provide another update shortly.' +  
+    isProductPlural = "Product";
 
-    //This will be our 3rd template:
-    // Internal Status Page Template:
-    // Product Impact
-    // Timeline - If needed later on: '<br>Timeline - ' + utcStr.replace("GMT","UTC")
-    // Customer Reports
-    // Customer Impact
-    // Slack Channel
-    // Conf. Bridge
+    if (productsLenght > 1){
 
-    '<br><br><strong>Internal Status Page Template:</strong><br><br>' + finalTitle + '<br><br></bnr>Product Impact - ' + selected +
-    '<br>Customer Reports - ' + cReports + '<br>Customer Impact - Customers may be ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
-    confBridge + ' ' + '<a href="https://www.uberconference.com/cloudsupport">https://www.uberconference.com/cloudsupport</a>' +
+        isProductPlural = "Products";
 
-    //This will be the 4th and last template:
-    // Comms Response Template:
-    // We are currently having a [SEVERITY] incident for [PRODUCTs] where users [ISSUE].
-    // Status pages are being sent at this moment. Please thread the questions in this message.
-    // Slack incident channel [SLACK CHANNEL]
+    }
 
-    '<br><br><strong>Comms Response Template:</strong><br><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users are ' + cImpact + '.' +
-    '<br>Status pages are being sent at this moment. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
+    var tab = window.open('about:blank', '_blank');
 
-    '<br><br>Your friends:<br><img src="images/lminoclogo.png" alt="NOC_Logo" width="124" height="150">' +
+    html = '<title>Results - Comms Response (FINAL)</title>'
+    + '<b>Comms Response - Closing Statement</b>'
+    + '<br><br><b>' + isProductPlural + ' Impact: </b>' + selected
+    + '<br><b>Timeline: </b>' + getTimeline
+    + '<br><b>Customer Impact: </b>' + cImpact
+    + '<br><b>Customer Reports: </b>' + cReports
+    + '<br><b>Root Cause: </b>' + getRootCause
+    + '<br><b>Incident Status Update </b> - Resolved'
+    + '<br><b>What was done to resolve the issue? </b>\n' + getFix
+    + '<br><b>RFO</b> - Upon request, RFO for external customer communication will be published to the RFO distribution list within 48-72 hours.'
+    + '<br><b>PostMortem/RCA</b> - A detailed technical doc will be shared in the incident Slack Channel ' + cSlackChannel;
 
-    '<br><br><strong>DONT FORGET TO SEND THE SLACK UPDATES</strong>'
-    
-    ); */
-
-    console.log(today);
+    tab.document.write(html);
+    tab.document.close();
 
 }
 

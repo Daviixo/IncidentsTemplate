@@ -93,8 +93,8 @@ function createTemplateComms(){
 
     var tab = window.open('about:blank', '_blank');
 
-    html = '<title>Results - Internal Status Page & Comms Response (FINAL)</title>'
-    + '<b>Comms Response - Closing Statement</b>'
+    html = '<title>Results - Internal Status Page & Comms Response</title>'
+    + '<b>Internal Status Page & Comms Response - Closing Statement</b>'
     + '<br><br><b>' + isProductPlural + ' Impact: </b>' + selected
     + '<br><b>Timeline: </b>' + getTimeline
     + '<br><b>Customer Impact: </b>' + cImpact

@@ -133,7 +133,7 @@ function createDraft(){
     + 'We will continue to monitor the situation and will provide a final update shortly.'
     + '<br><h1>Resolved</h1>'
     + 'We have confirmed that the issue has been resolved and all systems are 100% operational at this time.<br><br>'
-    + 'We will conduct an internal investigation of this issue and make appropriate improvement to our system to help prevent or minimize future recurrence.';
+    + 'We will conduct an internal investigation of this issue and make appropriate improvements to our system to help prevent or minimize future recurrence.';
 
     tab.document.write(html);
     tab.document.close(); 

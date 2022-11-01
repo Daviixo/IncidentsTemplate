@@ -69,7 +69,31 @@ function createTemplateComms(){
 
     var cSlackChannel = document.getElementById("slackChannel").value;
 
-    var getTimeline = document.getElementById("timeline").value;
+    // Lets get our Start and End time
+
+    var getStartTime = document.getElementById("startDateTime").value;
+
+    console.log("My getStartTime BEFORE: " + getStartTime);
+
+    var newStartTime = fixDate(getStartTime);
+
+    console.log('New start time: ' +  newStartTime);
+
+    // Now let's get our End time
+    
+    var getEndTime = document.getElementById("endDateTime").value;
+
+    console.log("End Time BEFORE: " + getEndTime);
+
+    var newEndTime = fixDate(getEndTime);
+
+    console.log('New end time: ' +  newEndTime);
+
+    // For example: 10/25/2022 9:00 AM UTC - 10/26/2022 04:39 PM UTC
+
+    var finalTimeline = newStartTime + " UTC - " + newEndTime + " UTC";
+
+    // End of fixing date format
 
     var cImpact = document.getElementById("impact").value;
 
@@ -97,7 +121,7 @@ function createTemplateComms(){
     html = '<title>Results - Internal Status Page & Comms Response</title>'
     + '<h1><b>Comms Response - Closing Statement</b></h1>'
     + '<b>' + isProductPlural + ' Impact: </b>' + selected
-    + '<br><b>Timeline: </b>' + getTimeline
+    + '<br><b>Timeline: </b>' + finalTimeline
     + '<br><b>Customer Impact: </b>' + cImpact
     + '<br><b>Customer Reports: </b>' + cReports
     + '<br><b>Root Cause: </b>' + getRootCause
@@ -107,7 +131,7 @@ function createTemplateComms(){
     + '<br><b>PostMortem/RCA</b> - A detailed technical doc will be shared in the incident Slack Channel ' + cSlackChannel
     
     + '<h1><b>Internal Status Page - Closing Statement</b></h1>'
-    + 'On ' + getTimeline + ',' + selected 
+    + 'On ' + finalTimeline + ',' + selected 
     + ' customers may have been ' + cImpact 
     + '. This was identified to have been caused due to ' + getRootCause + '.'
     + ' To mitigate the issue, ' + getFix
@@ -137,5 +161,49 @@ function createDraft(){
 
     tab.document.write(html);
     tab.document.close(); 
+
+}
+
+function fixDate(getDate){
+
+    var date = new Date(getDate);
+
+    getJustMonth = date.getMonth();
+
+    date = date.toString();
+
+    splitDate = date.split(" ");
+
+    // Splitting the date
+
+    splitWeekDay = splitDate[0].replace(",","");
+    splitMonth = splitDate[1];
+    splitDay = splitDate[2];
+    splitYear = splitDate[3];
+    splitTime = splitDate[4];
+    splitTimezone = splitDate[5];
+
+    //Let's now divide our time
+
+    finalTime = splitDate[4].split(":");
+    splitHour = finalTime[0];
+    splitMinutes = finalTime[1];
+    splitMinutesOne = splitMinutes[0];
+    splitMinutesTwo = splitMinutes[1];
+
+    finalSplitMinutes = splitMinutesOne + splitMinutesTwo;
+
+    var d = new Date(splitYear,getJustMonth,splitDay,splitHour,finalSplitMinutes);
+    var ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+    var mo = new Intl.DateTimeFormat('en', { month: 'numeric' }).format(d);
+    var da = new Intl.DateTimeFormat('en', { day: 'numeric' }).format(d);
+    var wd = new Intl.DateTimeFormat('en', { weekday: 'long' }).format(d);
+    var ti = new Intl.DateTimeFormat('en', { hour: 'numeric', hour12: true, minute: '2-digit'}).format(d);
+
+    // For example: 10/25/2022 9:00 AM UTC - 10/26/2022 04:39 PM UTC
+
+    var fixedFormattedDate = mo + '/' + da + '/' + ye + ' ' + ti;
+
+    return fixedFormattedDate;
 
 }

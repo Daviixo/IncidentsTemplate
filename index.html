@@ -151,13 +151,26 @@
         </div>
     </div>
 
-    <div class="mb-3 row">
-        <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Timeline</strong></label>
-        <p style="font-size:11px">For example: 10/25/2022 9:00 AM UTC - 10/26/2022 04:39 PM UTC</p>
-        <div class="col-sm-13">
-            <input type="text" id="timeline" rows="1" cols="30" wrap="soft" class="form-control">
+    <p style="font-size:11px">"Remember to add the dates below as UTC and not your timezone."</p>
+
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive"><label><strong>Start - Date/Time</strong></label></div>
+            
+            <div class="">
+                    <input type="datetime-local" id="startDateTime" class="form-control" value="" />
+            </div><br>
         </div>
-    </div><br>
+
+        <div class="col">
+            <div class="table-responsive"><label><strong>End - Date/Time</strong></label></div>
+            
+            <div class="">
+                    <input type="datetime-local" id="endDateTime" class="form-control" value="" />
+            </div><br>
+        </div>
+    </div>
+
 
     <button type="button" class="btn btn-success" onclick="createTemplateComms();">Create Template</button><br><br>
 

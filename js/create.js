@@ -73,21 +73,21 @@ function createTemplateComms(){
 
     var getStartTime = document.getElementById("startDateTime").value;
 
-    console.log("My getStartTime BEFORE: " + getStartTime);
+    //console.log("My getStartTime BEFORE: " + getStartTime);
 
     var newStartTime = fixDate(getStartTime);
 
-    console.log('New start time: ' +  newStartTime);
+    //console.log('New start time: ' +  newStartTime);
 
     // Now let's get our End time
     
     var getEndTime = document.getElementById("endDateTime").value;
 
-    console.log("End Time BEFORE: " + getEndTime);
+    //console.log("End Time BEFORE: " + getEndTime);
 
     var newEndTime = fixDate(getEndTime);
 
-    console.log('New end time: ' +  newEndTime);
+    //console.log('New end time: ' +  newEndTime);
 
     // For example: 10/25/2022 9:00 AM UTC - 10/26/2022 04:39 PM UTC
 
@@ -105,7 +105,7 @@ function createTemplateComms(){
 
     var productsLenght = selected.length;
     
-    console.log("Lenght: " + productsLenght);
+    //console.log("Lenght: " + productsLenght);
 
     isProductPlural = "Product";
 

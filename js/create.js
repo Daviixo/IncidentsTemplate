@@ -47,7 +47,7 @@ function createTemplate(){
     '<br>Customer Reports - ' + cReports + '<br>Customer Impact - Customers may be ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
     confBridge + ' ' + '<a href="https://www.uberconference.com/cloudsupport">https://www.uberconference.com/cloudsupport</a>' +
     '<br><br><strong>Comms Response Template:</strong><br><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users are ' + cImpact + '.' +
-    '<br>Status pages are have been sent. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
+    '<br>Status pages have been sent. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
     '<br><br>Your friends:<br><img src="images/lminoclogo.png" alt="NOC_Logo" width="124" height="150">' +
     '<br><br><strong>DONT FORGET TO SEND THE SLACK UPDATES</strong>'
 

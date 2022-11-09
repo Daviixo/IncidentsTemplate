@@ -41,7 +41,7 @@ function createTemplate(){
 
     html = '<title>Results - Incidents Templates</title><br><strong> External Status Page Template</strong><br><br>' + selected + ' - ' + cTittle
     + '<br><br>We are actively investigating reports that some ' + selected + ' customers may be '
-    + cImpact + '. <br><br>Our engineers are working to resolve the issue and will provide another update shortly.' +  
+    + cImpact + '. <br><br>Our engineers are working to identify the issue and will provide another update shortly.' +  
 
     '<br><br><strong>Internal Status Page Template:</strong><br><br>' + finalTitle + '<br><br></bnr>Product Impact - ' + selected +
     '<br>Customer Reports - ' + cReports + '<br>Customer Impact - Customers may be ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 

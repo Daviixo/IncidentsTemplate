@@ -1,4 +1,6 @@
 function createTemplate(){
+
+    // This is Part I - Investigating
     
     //Var today could be useful in the future, leaving that here for reference
     var today = new Date().toLocaleDateString('en-us', { hour:"2-digit", minute:"2-digit", weekday:"long", year:"numeric", month:"short", day:"numeric"});
@@ -29,34 +31,31 @@ function createTemplate(){
 
     var finalTitle = cIncidentType + " - " + selected + " - " + cTittle;
 
-    //alert("Creating templates for: " + selected);
-
-    //FYI: IMPACT == ISSUE!
-
-    // This will be our first template - External Status Page Template:
-    //[PRODUCT] - [ISSUE]
-
     var tab = window.open('about:blank', '_blank');
 
-    html = '<title>Results - Incidents Templates</title><br><strong> External Status Page Template</strong><br><br>' + 
+    html = '<title>Results - Investigating</title>' +
+    '<h1>External Status Page Template</h1>' + 
     selected + ' - ' + cTittle
     + '<br><br>We are actively investigating reports that some ' + selected + ' customers may be '
     + cImpact + '. <br><br>Our engineers are working to identify the issue and will provide another update shortly.' +  
     
-    '<br><br><strong>Internal Status Page Template:</strong><br><br>' + 
+    '<h1>Internal Status Page Template:</h1>' + 
     finalTitle + 
     '<br><br>Our engineers are investigating a ' + cIncidentType + ' incident for ' + selected +
     '<br><br><b>Customer Impact - </b>' + cTittle +
-    '<br><b>Customer Reports - </b>' + cImpact +
-    '<br><b>Slack Channel - </b>' + cSlackChannel;
+    '<br><b>Customer Reports - </b>' + cReports +
+    '<br><b>Slack Channel - </b>' + cSlackChannel
 
+    + '<h1>Comms Response Template:</h1>'
+    + '@here'
+    + '<br>Our engineers are investigating a ' + cIncidentType + ' for ' + selected
+    + '<br><b>Customer Impact - </b>' + cTittle
+    + '<br><b>Customer Reports - </b>' + cReports
+    + '<br><b>Slack Channel - </b>' + cSlackChannel
+    + '<br><br>Please thread questions in this message.'
 
-    // '<br><br>Customer Reports - ' + cReports + '<br>Customer Impact - Customers may be ' + cImpact + '<br>Slack Channel - ' + cSlackChannel + '<br>Conf. Bridge - ' + 
-    // confBridge + ' ' + '<a href="https://www.uberconference.com/cloudsupport">https://www.uberconference.com/cloudsupport</a>' +
-    // '<br><br><strong>Comms Response Template:</strong><br><br>We are currently having a ' + cIncidentType + ' incident for ' + selected + ' where users are ' + cImpact + '.' +
-    // '<br>Status pages have been sent. Please thread the questions in this message.<br>Slack incident channel ' + cSlackChannel + 
-    // '<br><br>Your friends:<br><img src="images/lminoclogo.png" alt="NOC_Logo" width="124" height="150">' +
-    // '<br><br><strong>DONT FORGET TO SEND THE SLACK UPDATES</strong>'
+    + '<h1>outages_goto Channel</h1>'
+    + cIncidentType + ' - ' + selected + ' - ' + cTittle + ' - ' + cSlackChannel;
 
     tab.document.write(html);
     tab.document.close(); 
@@ -77,32 +76,20 @@ function createTemplateComms(){
     var cSlackChannel = document.getElementById("slackChannel").value;
 
     // Lets get our Start and End time
-
     //var getStartTime = document.getElementById("startDateTime").value;
-
     //console.log("My getStartTime BEFORE: " + getStartTime);
-
     //var newStartTime = fixDate(getStartTime);
-
     //console.log('New start time: ' +  newStartTime);
-
     // Now let's get our End time
-    
     //var getEndTime = document.getElementById("endDateTime").value;
-
     //console.log("End Time BEFORE: " + getEndTime);
-
     //var newEndTime = fixDate(getEndTime);
-
     //console.log('New end time: ' +  newEndTime);
-
     // For example: 10/25/2022 9:00 AM UTC - 10/26/2022 04:39 PM UTC
-
     //var finalTimeline = newStartTime + " UTC - " + newEndTime + " UTC";
-
     // End of fixing date format
 
-    var cImpact = document.getElementById("impact").value;
+    //var cImpact = document.getElementById("impact").value;
 
     var cReports = document.getElementById("customerReports").value;
 
@@ -126,24 +113,20 @@ function createTemplateComms(){
 
     var tab = window.open('about:blank', '_blank');
 
-    html = '<title>Results - Internal Status Page & Comms Response</title>'
-    + '<h1><b>Comms Response - Closing Statement</b></h1>'
-    + '<b>' + isProductPlural + ' Impact: </b>' + selected
-    //+ '<br><b>Timeline: </b>' + finalTimeline
-    + '<br><b>Customer Impact: </b>' + cImpact
-    + '<br><b>Customer Reports: </b>' + cReports
-    + '<br><b>Root Cause: </b>' + getRootCause
-    + '<br><b>Incident Status Update </b> - Resolved'
-    + '<br><b>What was done to resolve the issue? </b>' + getFix
-    + '<br><b>RFO</b> - Upon request, RFO for external customer communication will be published to the RFO distribution list within 48-72 hours.'
-    + '<br><b>PostMortem/RCA</b> - A detailed technical doc will be shared in the incident Slack Channel ' + cSlackChannel
+    html = '<title>Results - Resolved</title>' +
     
     + '<h1><b>Internal Status Page - Closing Statement</b></h1>'
     + 'We have confirmed that the issue has been resolved and that all systems are 100% operational.'
     + '<br><br><b>Final Customer Reports - </b>' + cReports
     + '<br><b>Root Cause - </b>' + getRootCause
     + '<br><b>Resolution - </b>' + getFix
-    + '<br><b>PostMortem - </b>A detailed technical document will be shared in the incident Slack Channel ' + cSlackChannel;
+    + '<br><b>PostMortem - </b>A detailed technical document will be shared in the incident Slack Channel ' + cSlackChannel
+
+    + '<h1><b>Comms Response - Closing Statement</b></h1>'
+    + '<b>Final Customer Reports - </b>' + cReports 
+    + '<br><b>Root Cause - </b>' + getRootCause 
+    + '<br><b>Resolution - </b>' + getFix
+    + '<br><b>Postmortem - </b>A detailed technical document will be shared in the incident Slack Channel ' + cSlackChannel
 
     tab.document.write(html);
     tab.document.close();
@@ -173,6 +156,51 @@ function createDraft(){
 
     tab.document.write(html);
     tab.document.close(); 
+
+}
+
+function createTemplateIdentified(){
+
+    // Output should be:
+    // Our engineers have identified the issue as being caused by CAUSE and are now ACTION BEING TAKEN FOR RESOLUTION.
+
+    var getCause = document.getElementById("cause").value;
+    var getActionsTaken = document.getElementById("actionsbeingtaken").value;
+
+    var tab = window.open('about:blank', '_blank');
+
+    html = '<title>Results - Identified</title>' +
+    '<h1>Identifified</h1>' +
+    'Our engineers have identified the issue as being caused by ' + getCause +
+    ' and are now ' + getActionsTaken + '.' +
+    
+    '<h1>Comms Response</h1>' +
+    'Our engineers have identified the issue as being caused by ' + getCause +
+    ' and are now ' + getActionsTaken;
+
+    tab.document.write(html);
+    tab.document.close();
+    
+}
+
+function createTemplateMonitoring(){
+
+    // Output should be:
+    // COMPLETED ACTION FOR RESOLUTION and we are confirming that all services are functional.
+
+    var getCompletedAction = document.getElementById("completedaction").value;
+
+    var tab = window.open('about:blank', '_blank');
+
+    html = '<title>Results - Monitoring</title>' +
+    '<h1>Monitoring</h1>' +
+    getCompletedAction + ' and we are confirming that all services are functional.' +
+
+    '<h1>Comms Response</h1>' +
+    getCompletedAction + ' and we are confirming that all services are functional.'
+
+    tab.document.write(html);
+    tab.document.close();
 
 }
 

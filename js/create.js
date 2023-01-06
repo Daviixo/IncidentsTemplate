@@ -172,7 +172,7 @@ function createTemplateIdentified(){
     var tab = window.open('about:blank', '_blank');
 
     html = '<title>Results - Identified</title>' +
-    '<h1>Identifified</h1>' +
+    '<h1>Identified</h1>' +
     'Our engineers have identified the issue as being caused by ' + getCause +
     ' and are now ' + getActionsTaken + '.' +
     

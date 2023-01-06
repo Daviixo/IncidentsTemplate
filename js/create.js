@@ -98,25 +98,14 @@ function createTemplateComms(){
     var getFix = document.getElementById("fix").value;
 
     var getFinalCustomerReports = document.getElementById("finalcustomerreports").value;
-
-    var productsLenght = selected.length;
     
     //console.log("Lenght: " + productsLenght);
-
-    isProductPlural = "Product";
-
-    if (productsLenght > 1){
-
-        isProductPlural = "Products";
-
-    }
 
     // This will create the CLOSING statements
 
     var tab = window.open('about:blank', '_blank');
 
-    html = '<title>Results - Resolved</title>' +
-    
+    html = '<title>Results - Resolved</title>'
     + '<h1><b>Internal Status Page - Closing Statement</b></h1>'
     + 'We have confirmed that the issue has been resolved and that all systems are 100% operational.'
     + '<br><br><b>Final Customer Reports - </b>' + cReports

@@ -97,6 +97,8 @@ function createTemplateComms(){
 
     var getFix = document.getElementById("fix").value;
 
+    var getFinalCustomerReports = document.getElementById("finalcustomerreports").value;
+
     var productsLenght = selected.length;
     
     //console.log("Lenght: " + productsLenght);
@@ -127,6 +129,13 @@ function createTemplateComms(){
     + '<br><b>Root Cause - </b>' + getRootCause 
     + '<br><b>Resolution - </b>' + getFix
     + '<br><b>Postmortem - </b>A detailed technical document will be shared in the incident Slack Channel ' + cSlackChannel
+
+    + '<h1>outages_goto Channel - Closing Statement</h1>'
+    + 'We have confirmed that the issue has been resolved and that all systems are 100% operational.'
+    + '<br><b>Final Customer Reports - </b>' + getFinalCustomerReports 
+    + '<br><b>Root Cause - </b>' + getRootCause
+    + '<br><b>Resolution - </b>' + getFix
+    + '<br><b>PostMortem - </b>A detailed technical document will be shared in the incident Slack Channel ' + cSlackChannel;
 
     tab.document.write(html);
     tab.document.close();

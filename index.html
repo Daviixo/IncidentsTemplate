@@ -31,7 +31,7 @@
         <div class="center">
             <h2><b>Incidents Template - Investigating</b></h2>
             <h5>Output will show the Investigating phase for: </h5>
-            <h6>External/Internal SPs, Comms Response</h6>
+            <h6>External/Internal SPs, Comms Response & Outages_GoTo</h6>
             <select onchange="location = this.options[this.selectedIndex].value;">
                 <option value="#">GoTo Another Template</option>
                 <option value="https://daviixo.github.io/IncidentsTemplate/">Incidents Template</option>
@@ -175,7 +175,7 @@
     <div class="center">
         <h2><b>Incidents Template - Resolved</b></h2>
         <h5>Output will show the closing statement for: </h5>
-        <h6>Internal Status Page & Comms Response</h6>
+        <h6>Internal Status Page, Comms Response & Outages_GoTo</h6>
     </div>
 
     <div class="mb-3 row">
@@ -189,6 +189,13 @@
         <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>What was done to fix the issue?</strong></label>
         <div class="col-sm-13">
             <input type="text" id="fix" rows="1" cols="30" wrap="soft" class="form-control">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputCallerEmail" class="col-sm-10 col-form-label"><strong>Final Customer Reports</strong></label>
+        <div class="col-sm-13">
+            <input type="text" id="finalcustomerreports" rows="1" cols="30" wrap="soft" class="form-control">
         </div>
     </div>
 

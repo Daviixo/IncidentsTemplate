@@ -137,17 +137,21 @@ function createDraft(){
 
     html = '<title>Results - Incidents Templates</title>'
     + '<h1>Identified</h1>'
-    + 'Our engineers believe to have identified the issue and are now actively working towards a resolution.<br><br>'
+    + 'Our engineers have identified the issue and are now actively working towards a resolution.<br><br>'
     + 'We will provide another update shortly.'
+
     + '<br><h1>Identified (Caused by a Third-Party Vendor)</h1>'
-    + 'Our engineers have identified the issue as being caused by an ongoing incident with one of our underlying carriers who are actively working towards a resolution.'
+    + 'Our engineers have identified the issue as being caused by an ongoing incident with one of our underlying third-party service providers who are actively working towards a resolution.'
     + '<br><br>We will provide another update as soon as they become available.'
+
     + '<br><h1>Monitoring</h1>'
     + 'Our engineers have corrected the issue and we are confirming that all services are functional.<br><br>'
-    + 'We will continue to monitor the situation and will provide a final update shortly.'
+    + 'We will continue monitoring the situation and provide a final update shortly.'
+
     + '<br><h1>Monitoring (Caused by a Third-Party Vendor)</h1>'
-    + 'Our underlying carrier has corrected the issue and we are confirming that all services are functional.'
+    + 'Our underlying third-party service provider has corrected the issue and we are confirming that all services are functional.'
     + '<br><br>We will continue monitoring the situation and provide a final update shortly.'
+
     + '<br><h1>Resolved</h1>'
     + 'We have confirmed that the issue has been resolved and all systems are 100% operational at this time.<br><br>'
     + 'We will conduct an internal investigation of this issue and make appropriate improvements to our system to help prevent or minimize future recurrence.';
